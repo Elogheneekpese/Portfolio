@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eloghene Tracy Ekpese | Customer Success Manager</title>
+<meta name="description" content="Customer Success Manager portfolio: churn recovery, scalable customer success and customer experience case studies.">
+<style>
+  :root{
+    --teal:#0f766e; --teal-dark:#115e59; --teal-light:#ccfbf1; --ink:#1f2937; --muted:#6b7280;
+    --bg:#ffffff; --soft:#f6faf9; --line:#e5e7eb;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  a{color:var(--teal)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .brand{font-weight:700;color:var(--teal-dark);text-decoration:none}
+  nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+  nav ul a{text-decoration:none;color:var(--ink);font-size:.95rem}
+  nav ul a:hover{color:var(--teal)}
+  .hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:80px 0}
+  .hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px}
+  .hero-text{flex:1 1 auto}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);margin:0 0 8px;line-height:1.15}
+  .hero .role{font-size:1.25rem;color:var(--teal-light);margin:0 0 18px;font-weight:600}
+  .hero p.lead{max-width:600px;font-size:1.1rem;margin:0 0 28px}
+  .photo{flex:0 0 auto;width:260px;height:260px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.85);box-shadow:0 10px 30px rgba(0,0,0,.25);background:var(--teal-light)}
+  .btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600;margin:0 10px 10px 0}
+  .btn.primary{background:#fff;color:var(--teal-dark)}
+  .btn.ghost{border:2px solid #fff;color:#fff}
+  .btn.solid{background:var(--teal);color:#fff;margin:6px 0 0}
+  .hl{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;color:var(--teal-light);font-size:.95rem}
+  .hl strong{color:#fff;font-size:1.3rem;margin-right:6px}
+  section{padding:70px 0}
+  section.alt{background:var(--soft)}
+  h2{color:var(--teal-dark);font-size:1.9rem;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 32px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center}
+  .stat .num{display:block;font-size:2.2rem;font-weight:800;color:var(--teal);line-height:1.1}
+  .stat .lbl{display:block;margin-top:8px;color:var(--muted);font-size:.92rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:22px;overflow:hidden}
+  details.case summary{list-style:none;cursor:pointer;padding:26px 28px}
+  details.case summary::-webkit-details-marker{display:none}
+  .tag{display:inline-block;background:var(--teal-light);color:var(--teal-dark);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+  .case h3{margin:0 0 8px;font-size:1.35rem}
+  .case .brief{margin:0;color:var(--muted)}
+  .more{display:inline-block;margin-top:14px;color:var(--teal);font-weight:600}
+  details[open] .more::after{content:" (close)"}
+  details:not([open]) .more::after{content:" →"}
+  .body{padding:0 28px 28px;border-top:1px solid var(--line)}
+  .body h4{color:var(--teal-dark);margin:26px 0 6px;font-size:1.05rem}
+  .body p,.body li{margin:6px 0}
+  .body ul,.body ol{padding-left:20px;margin:6px 0}
+  .note{font-size:.88rem;color:var(--muted);margin-top:8px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0}
+  .kpi{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+  .kpi b{display:block;font-size:1.4rem;color:var(--teal)}
+  .kpi span{font-size:.85rem;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--teal-light);color:var(--teal-dark)}
+  .scroll{overflow-x:auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin:0 8px 8px 0;font-size:.92rem}
+  footer{background:var(--teal-dark);color:#fff;text-align:center;padding:30px 0;font-size:.9rem}
+  @media(max-width:700px){
+    nav ul{gap:12px}nav ul a{font-size:.85rem}
+    .hero{padding:50px 0}
+    .hero .wrap{flex-direction:column-reverse;text-align:center;gap:28px}
+    .hero p.lead{margin-left:auto;margin-right:auto}
+    .hl{justify-content:center}
+    .photo{width:200px;height:200px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Eloghene Tracy Ekpese</a>
+    <ul>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>Eloghene Tracy Ekpese</h1>
+      <p class="role">Customer Success Manager</p>
+      <p class="lead">I help customers get real value from the products they pay for, so they stay, grow and recommend. My focus is spotting risk early, recovering at-risk accounts and building processes that scale.</p>
+      <a class="btn primary" href="#cases">View Case Studies</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+      <div class="hl">
+        <span><strong>100+</strong>customers onboarded</span>
+        <span><strong>90%</strong>retention</span>
+        <span><strong>$1.1M</strong>ARR</span>
+      </div>
+    </div>
+    <img class="photo" src="photo.jpg" alt="Eloghene Tracy Ekpese" onerror="this.style.display='none'">
+  </div>
+</header>
+
+<section class="alt" id="results">
+  <div class="wrap">
+    <h2>Results</h2>
+    <p class="sub">What my customer success work has delivered.</p>
+    <div class="stats">
+      <div class="stat"><span class="num">100+</span><span class="lbl">customers onboarded</span></div>
+      <div class="stat"><span class="num">90%</span><span class="lbl">customer retention</span></div>
+      <div class="stat"><span class="num">$1.1M</span><span class="lbl">ARR</span></div>
+      <div class="stat"><span class="num">30+</span><span class="lbl">customers followed up monthly</span></div>
+      <div class="stat"><span class="num">10</span><span class="lbl">at-risk accounts re-engaged</span></div>
+      <div class="stat"><span class="num">10+</span><span class="lbl">complex issues resolved monthly</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">Abuja, Nigeria &middot; Open to remote roles</p>
+    <p>I am a Customer Success professional who has onboarded 100+ customers and kept retention at 90%. I also bring a background in support and sales development. I believe retention is decided long before a customer cancels: it is decided by whether they were onboarded properly, trained properly and noticed when something went quiet.</p>
+    <p>The case studies below show how I approach churn: diagnose what went wrong, plan a recovery with clear owners and timelines, and design processes that catch problems earlier.</p>
+  </div>
+</section>
+
+<section class="alt" id="cases">
+  <div class="wrap">
+    <h2>Case Studies</h2>
+    <p class="sub">Three customer success case studies. Click one to read it, or open the slides.</p>
+
+    <!-- CASE STUDY 1 -->
+    <div class="card">
+      <details class="case">
+        <summary>
+          <span class="tag">Churn Recovery &middot; Case study</span>
+          <h3>Case Study 1: Kanem Freight, from Churn to Growth (Olumo Workforce)</h3>
+          <p class="brief">Turning an account that threatened to cut half its contract or cancel into a renewal that grew by 50%, using a customer journey map, a 30-day recovery plan and an early-warning health score.</p>
+          <span class="more">Read the full case study</span>
+        </summary>
+        <div class="body">
+          <a class="btn solid" href="case-1-kanem-freight.pdf" target="_blank" rel="noopener">View the slides (PDF)</a>
+
+          <h4>The churn threat</h4>
+          <p>Kanem Freight is a haulage firm in Apapa with 1,200 staff and depots in Kano and Port Harcourt, and has been a customer of Olumo Workforce, an HR and payroll software company, since 2023. The HR Director who bought the software resigned in February 2026. In April, the new CFO gave two options: cut to 600 seats, or cancel and return to Excel and bank schedules. The renewal date was 1 July 2026.</p>
+          <div class="kpis">
+            <div class="kpi"><b>₦21.6m</b><span>annualized value at risk (1,200 seats × ₦1,500 × 12)</span></div>
+            <div class="kpi"><b>₦10.8m</b><span>annualized value of the 600-seat offer</span></div>
+            <div class="kpi"><b>1 Jul 2026</b><span>renewal date</span></div>
+          </div>
+          <p class="note">Calculated from seat count and rate. Annualized, not recognized revenue.</p>
+
+          <h4>The customer journey map</h4>
+          <p>We mapped the account on a Miro board across seven stages: Buy (2023), Onboard (2023), Use (2023 to Oct 2025), Drift (Oct 2025 to Feb 2026), Crisis (Feb to Apr 2026), Recover (Apr to Jul 2026) and Grow (after 1 Jul 2026). Head office was trained and the depots were not. Nobody reviewed usage for eight months, so the slide went unseen until the HR Director resigned and the CFO wrote.</p>
+
+          <h4>Adoption gaps</h4>
+          <ul>
+            <li>45% of paid seats used in March 2026: 540 staff paid through the platform out of 1,200 seats (a gap of 660)</li>
+            <li>Active admins fell from 14 (Oct 2025) to 5 (Apr 2026)</li>
+            <li>0 support tickets in 3 months, 8 months since a business review, no NPS response</li>
+            <li>1 contact known at Kanem, head office only trained, SMS payslips never switched on</li>
+          </ul>
+
+          <h4>Voice of the customer</h4>
+          <ul>
+            <li><strong>CFO:</strong> "I see an invoice every month. I do not see what we get for it." <em>Gap: no proof of value.</em></li>
+            <li><strong>HR Manager:</strong> "Bola did everything in the system. I only know how to run head office payroll." <em>Gap: one champion, no second owner.</em></li>
+            <li><strong>Kano depot manager:</strong> "Nobody showed us anything. We email our pay schedule to Lagos every month." <em>Gap: depots never trained.</em></li>
+            <li><strong>Driver:</strong> "They say my payslip is in my email. I do not have email. I ask the cashier." <em>Gap: SMS payslips off.</em></li>
+          </ul>
+
+          <h4>Recovery roadmap</h4>
+          <div class="scroll">
+          <table>
+            <tr><th>Stage</th><th>Where we fell short</th><th>How we fix it</th></tr>
+            <tr><td>1 Buy</td><td>One champion, no second owner</td><td>Named owner and backup at Kanem</td></tr>
+            <tr><td>2 Onboard</td><td>Depots never trained</td><td>Train Kano and Port Harcourt</td></tr>
+            <tr><td>3 Use</td><td>SMS payslips off</td><td>Switch SMS payslips on</td></tr>
+            <tr><td>4 Drift</td><td>No review for 8 months</td><td>Usage reports and regular reviews</td></tr>
+            <tr><td>5 Crisis</td><td>CFO saw no proof of value</td><td>Reply fast, own the gap, book a call</td></tr>
+            <tr><td>6 Recover</td><td>Risk: 600 seats before results</td><td>Share summary, agree measurable targets</td></tr>
+            <tr><td>7 Grow</td><td>Risk: gains fade without owners</td><td>Review regularly, find the next need</td></tr>
+          </table>
+          </div>
+
+          <h4>The 30-day execution</h4>
+          <div class="scroll">
+          <table>
+            <tr><th>Week</th><th>What we did</th></tr>
+            <tr><td>1</td><td>Emailed the CFO through HubSpot, then met him in person in Apapa. Owned the usage gap, asked about his goals and milestones, and agreed a 30-day plan.</td></tr>
+            <tr><td>2</td><td>Ran a mini onboarding for the CFO and HR Manager in a training sandbox, and switched SMS payslips on.</td></tr>
+            <tr><td>3</td><td>Trained the Kano and Port Harcourt depot teams to run payroll in the platform.</td></tr>
+            <tr><td>4</td><td>Re-engaged inactive admins, opened a Slack channel, set up an Airtable voice-of-customer log and started weekly reports.</td></tr>
+          </table>
+          </div>
+
+          <h4>Success workflow</h4>
+          <ul>
+            <li><strong>Reporting:</strong> weekly and monthly reports to the CFO (Notion).</li>
+            <li><strong>Reviews:</strong> executive business review at Day 60 and a QBR at Day 90.</li>
+            <li><strong>Early warning:</strong> a Zapier + HubSpot health-score workflow (at risk, needs attention, healthy) that creates a task for the CSM.</li>
+            <li><strong>Next need:</strong> at Day 60 we presented the value realized and proposed the renewal. The CFO announced an Abuja depot and asked for 600 additional seats.</li>
+          </ul>
+
+          <h4>Result</h4>
+          <div class="kpis">
+            <div class="kpi"><b>540 → 1,800</b><span>staff paid via the platform</span></div>
+            <div class="kpi"><b>5 → 18</b><span>active admins (Apr 2026 to Day 90)</span></div>
+            <div class="kpi"><b>80</b><span>health score at Day 90</span></div>
+            <div class="kpi"><b>₦32.4m</b><span>annualized contract (1,800 × ₦1,500 × 12)</span></div>
+          </div>
+          <p>The renewal was agreed at ₦1,500 per head for 1,800 seats over 12 months. That is 50% above the original ₦21.6m and three times the 600-seat offer. The cost per person paid fell from ₦3,333 to ₦1,500, and 1,800 seats paid with 1,800 staff paid is 100% seat use.</p>
+
+          <h4>Success playbook</h4>
+          <ol>
+            <li><strong>Map the journey first.</strong> It shows the gaps and the fixes.</li>
+            <li><strong>Own the problem.</strong> Accountability opened the executive door.</li>
+            <li><strong>Train where payroll runs.</strong> Depots, not just head office.</li>
+            <li><strong>Make value visible and automate the warning.</strong> Reports, reviews and a health score.</li>
+          </ol>
+
+          <h4>Tools used</h4>
+          <p>Miro, Gmail, HubSpot, Zoom, Trello, Claude, Google Vids, Slack, Airtable, Notion and Zapier.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- CASE STUDY 2 -->
+    <div class="card">
+      <details class="case">
+        <summary>
+          <span class="tag">Scalable Customer Success &middot; Case study</span>
+          <h3>Case Study 2: The Success Roadmap for Okonkwo FinTech Solutions (BukkiBooks)</h3>
+          <p class="brief">Turning product usage data into a scalable customer success process: feature-level alerts, a weighted health score, priority ranking and a HubSpot automation that flags at-risk accounts early.</p>
+          <span class="more">Read the full case study</span>
+        </summary>
+        <div class="body">
+          <a class="btn solid" href="case-2-okonkwo-fintech.pdf" target="_blank" rel="noopener">View the slides (PDF)</a>
+
+          <h4>The case in brief</h4>
+          <p>Okonkwo FinTech Solutions, a Lagos company, sells BukkiBooks, a cloud accounting and invoicing platform for Nigerian small and medium-sized businesses. One customer, Ihuoma Fashion House, stopped using the inventory reconciliation feature for five weeks. A Customer Success Executive spotted it on the usage dashboard and found that a new store manager had never been trained. She arranged training, a guide, a follow-up and a bulk-upload tool, and the customer renewed and upgraded at year end.</p>
+          <p>One caveat: a separate support fix and an unnamed decision-maker mean this is not a clean cause-and-effect story.</p>
+
+          <h4>The assessment question</h4>
+          <p>The case does not say how Okonkwo decides which accounts get proactive care, how usage data works across thousands of SME customers instead of one dashboard read account by account, or how to balance high-touch attention against the cost of serving a large customer base. Our answer: read usage as a signal, add customer context, prioritise human attention and automate the repeatable steps.</p>
+
+          <h4>Industry research</h4>
+          <ul>
+            <li><strong>Nigerian SMEs are the market.</strong> They make up about 96% of all businesses nationwide and 84% of total employment. But the market is not uniform: digital maturity varies, and adoption depends on perceived usefulness, cost, security and trust. A one-size-fits-all approach will not serve them all.</li>
+            <li><strong>Financial institutions already segment customers</strong> by behaviour and value, and monitor declining usage to trigger proactive engagement.</li>
+            <li><strong>Evidence on churn warning signs:</strong> a study of 3,959 B2B software subscriptions found that usage data added real predictive value to churn modelling. The limitation is that usage data shows what changed, not why, and feature-usage correlations can mislead if not validated. Use data to detect a change and human judgement to assess it.</li>
+            <li>Usage patterns differ between customers, so no single inactivity threshold should apply to every account without testing.</li>
+          </ul>
+          <p class="note">Sources: Agusto &amp; Co., 2025 Nigerian SME Industry Report; IFC/World Bank, African Microenterprises (2025); IFC/Accion, MSME Banking in the Digital Era (2025); Incorporating usage data for B2B churn prediction modeling, Industrial Marketing Management (2024).</p>
+
+          <h4>The signal, applied</h4>
+          <p>Over nine weeks of feature-level data, inventory reconciliation fell to zero from Week 5 while invoicing (88 to 101 events a week) and online shop sync held steady. A total-login or total-session count would have averaged this out and missed it. Only feature-level tracking caught it.</p>
+
+          <h4>Proposed process</h4>
+          <p>Monitor, Detect, Assess, Segment, Prioritise, Route, Intervene, Measure. The work is split three ways:</p>
+          <ul>
+            <li><strong>Automation:</strong> detects change, triggers alerts, creates tasks and delivers routine education.</li>
+            <li><strong>Customer Success:</strong> diagnoses why behaviour changed, understands goals, decides the response and owns the relationship.</li>
+            <li><strong>Customer Support:</strong> resolves technical bugs, access issues and individual tickets.</li>
+          </ul>
+          <p>Automation identifies the signal. Customer Success understands the reason.</p>
+
+          <h4>Health score and alerts</h4>
+          <div class="scroll">
+          <table>
+            <tr><th>Health score component</th><th>Weight</th></tr>
+            <tr><td>Feature adoption breadth</td><td>35%</td></tr>
+            <tr><td>Usage frequency and recency</td><td>30%</td></tr>
+            <tr><td>Transaction / financial volume</td><td>20%</td></tr>
+            <tr><td>Support and sentiment</td><td>15%</td></tr>
+          </table>
+          </div>
+          <ul>
+            <li><strong>Feature Abandonment Alert:</strong> a key feature unused for 14 consecutive days is flagged and routed to the CSM.</li>
+            <li><strong>Silent Freeze Alert:</strong> weekly activity drops 30% or more against baseline, and a check-in task is created automatically.</li>
+            <li><strong>Bands:</strong> 80 to 100 Healthy, 50 to 79 Monitor, below 50 At risk.</li>
+          </ul>
+          <p>Applied to the case, reconciliation dropping 100% while invoicing and payments stay healthy is what pulls the score into Monitor.</p>
+
+          <h4>Priority ranking</h4>
+          <div class="scroll">
+          <table>
+            <tr><th>Segment</th><th>What the data shows</th><th>Treatment</th></tr>
+            <tr><td>Healthy (80 to 100)</td><td>Stable or rising usage</td><td>Automated education, no CSM time</td></tr>
+            <tr><td>Needs attention (50 to 79)</td><td>Early decline, feature drop-off</td><td>Automated nudge, CSM watches</td></tr>
+            <tr><td>At risk (below 50)</td><td>Sharp drop, inactivity, tickets</td><td>CSM outreach, recovery plan</td></tr>
+            <tr><td>High value + at risk</td><td>Large SME account going quiet</td><td>Immediate CSM call, same day</td></tr>
+          </table>
+          </div>
+          <p>Rank = risk severity × customer value × renewal proximity × number of signals. Automated tiers absorb the long tail of SME accounts, so high-touch attention stays affordable at thousands of customers.</p>
+
+          <h4>Proof of concept in HubSpot</h4>
+          <p>We built the process in HubSpot using simulated customer data. The account record for Ihuoma Fashion House was classified as at risk for low product adoption, with a high-priority check-in task created by the system. The At-Risk segment is a live filter on the health-score property, isolating 353 of 1,000 accounts and re-scoring as the usage data changes. We also built the workflow end to end: when a health score crosses the threshold, an internal alert goes to the CSM by email, and the CSM opens the record and sees why.</p>
+
+          <h4>Customer success vs. customer support</h4>
+          <div class="scroll">
+          <table>
+            <tr><th></th><th>Customer Success (proactive)</th><th>Customer Support (reactive)</th></tr>
+            <tr><td>Approach</td><td>Monitors usage and health data to catch problems early</td><td>Responds to a specific issue the customer raises</td></tr>
+            <tr><td>Owns</td><td>Adoption, retention and account growth</td><td>Speed and accuracy for one bounded problem</td></tr>
+            <tr><td>Acts by</td><td>Initiating check-ins, training and feature rollout</td><td>Fixing what is broken</td></tr>
+            <tr><td>Measured on</td><td>Renewal, expansion and adoption</td><td>Response time, resolution and CSAT</td></tr>
+          </table>
+          </div>
+          <p>Support closes loops. Customer Success opens conversations. In the Ihuoma case, the support agent fixed a separate invoicing bug and owned that ticket to resolution, while the Customer Success Executive owned the relationship and the training gap. Neither took over the other's work, and the CSM kept visibility into support activity. Both teams work the same customer without competing for account ownership.</p>
+
+          <h4>Risks and mitigation</h4>
+          <ul>
+            <li><strong>Data shows the drop, not the reason.</strong> A usage dip flags a change but cannot explain it. Mitigation: treat the alert as a trigger for investigation, not a diagnosis. The CSM reviews, contacts the customer and logs the real cause.</li>
+            <li><strong>Alert fatigue from over-flagging.</strong> If every minor change triggers a notification, CSMs cannot tell which accounts truly need attention. Mitigation: segment and prioritise, so at-risk accounts get immediate attention, needs-attention accounts get scheduled outreach and healthy accounts stay automated.</li>
+          </ul>
+
+          <h4>Recommendation</h4>
+          <ol>
+            <li>Automate detection across every account, every week.</li>
+            <li>Contact the customer for a clear picture.</li>
+            <li>Route technical issues to Support, not Customer Success.</li>
+            <li>Measure customer outcomes, not alert or contact volume.</li>
+          </ol>
+          <p>This is the process that would have caught the customer in week one, not week five.</p>
+
+          <h4>Tools used</h4>
+          <p>HubSpot, Gmail, Claude, Excel, Calendly and Zoom. A production build would add Mixpanel for product-usage events, Gainsight for health scoring, Zapier for higher-volume automation, Intercom for in-app education and Zendesk for support escalation.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- CASE STUDY 3 -->
+    <div class="card">
+      <details class="case">
+        <summary>
+          <span class="tag">Customer Experience Review &middot; Case study</span>
+          <h3>Case Study 3: Fixing Onboarding and Customer Feedback at Sunrise Digital MFB</h3>
+          <p class="brief">A Board-level review of why 88% of Sunrise Pocket registrants never become active customers, with a redesigned onboarding flow, a Voice of the Customer loop and a working prototype and pilot.</p>
+          <span class="more">Read the full case study</span>
+        </summary>
+        <div class="body">
+          <a class="btn solid" href="case-3-sunrise-mfb.pdf" target="_blank" rel="noopener">View the slides (PDF)</a>
+
+          <h4>The situation</h4>
+          <p>Sunrise Digital MFB's customers increasingly open accounts through the Sunrise Pocket app instead of the banking hall, where staff used to guide them. Our Customer Experience team reviewed onboarding, customer feedback and the end-to-end journey, and presented the findings and recommendations to the Managing Director and the Board.</p>
+          <p>Three numbers framed the review:</p>
+          <ul>
+            <li><strong>12%</strong> of registrants are active after 30 days</li>
+            <li><strong>10,530</strong> verified customers never funded their account</li>
+            <li><strong>461+</strong> feedback items in two months, spread across four unconnected channels</li>
+          </ul>
+
+          <h4>Where customers drop out</h4>
+          <p>Last quarter's onboarding funnel:</p>
+          <div class="scroll">
+          <table>
+            <tr><th>Stage</th><th>Customers</th><th>From prior stage</th></tr>
+            <tr><td>Download and registration</td><td>42,600</td><td>100%</td></tr>
+            <tr><td>BVN / NIN verification</td><td>31,250</td><td>73%</td></tr>
+            <tr><td>Selfie and liveness check</td><td>24,100</td><td>77%</td></tr>
+            <tr><td>Tier selection and terms</td><td>19,870</td><td>82%</td></tr>
+            <tr><td>First deposit</td><td>9,340</td><td>47%</td></tr>
+            <tr><td>Active after 30 days</td><td>5,120</td><td>55%</td></tr>
+          </table>
+          </div>
+          <p>Verification lost the most people in absolute numbers (11,350). The finding that mattered most was at the finish line: of the customers who accepted the terms, only 47% made a first deposit, leaving 10,530 who had done the hard work and never funded their account. Today there is no mechanism to find out why.</p>
+
+          <h4>Why customers leave: friction and silence</h4>
+          <p>We spoke to customers and found two kinds of failure:</p>
+          <ul>
+            <li><strong>Friction:</strong> a trader lost his verification session midway and gave up because there is no save-and-resume; a fashion designer was confused by tier names written from the bank's point of view.</li>
+            <li><strong>Silence:</strong> a grains trader was never contacted after registering and assumed his account had failed; a retired civil servant got no confirmation that her documents had been received.</li>
+          </ul>
+          <p>The common thread: the flow assumes a perfect connection and perfect understanding, and has no human fallback when either fails.</p>
+
+          <h4>Redesigned onboarding</h4>
+          <p>We kept the same core stages but changed what the customer experiences at each one:</p>
+          <ul>
+            <li><strong>Welcome:</strong> what you'll need, how long it takes, and an agent-assisted option.</li>
+            <li><strong>Verify:</strong> auto-save with resume-by-SMS, an instant "documents received" message and a status tracker.</li>
+            <li><strong>Tier and terms:</strong> plain-language tier names, a one-screen comparison and a recommended tier.</li>
+            <li><strong>Account ready:</strong> instant confirmation with one clear next step, fund your account.</li>
+            <li><strong>First deposit:</strong> fund by transfer, USSD or agent cash, with a call or SMS within 24 hours if the account is unfunded.</li>
+            <li><strong>First 30 days:</strong> guided first transaction, Day 7 and Day 21 check-ins, and a "Talk to a person" option.</li>
+          </ul>
+          <p>Agent-assisted onboarding stays available at branches for older customers who prefer to open accounts in person. We built the revised flow as a working prototype in Figma and walked the Board through it.</p>
+
+          <h4>Voice of the Customer (VoC)</h4>
+          <p>In two months, customers gave feedback through 112 care-line calls (mostly about transfers failing and money held for hours), 89 app store reviews (repeated logouts and re-verification) and 260 social media comments (praising the loans but asking for a human inside the app). Branch notebooks held more that was never counted. Every signal was reactive and free text, and nobody owned it. The 10,530 customers who never funded did not call or review. They just left.</p>
+          <p>We proposed one loop with one owner:</p>
+          <ul>
+            <li><strong>Listen:</strong> collect from every channel, centralise into one record per item, and categorise by issue, journey stage and severity.</li>
+            <li><strong>Decide:</strong> prioritise by severity multiplied by volume, and assign a named owner with an SLA.</li>
+            <li><strong>Act:</strong> fix the root issue, tell customers what changed, and measure whether it recurs.</li>
+          </ul>
+          <p>The Head of CX owns the loop, with weekly triage and a monthly report to the MD. We also added the first solicited signal: a one-question survey after onboarding and after a failed transfer. Two issues come first: failed and delayed transfers (highest severity) and no human in the app (highest volume).</p>
+
+          <h4>Pilot: Airtable now, HubSpot at scale</h4>
+          <p>We ran the loop on Airtable as a low-cost pilot: a feedback form captures the issue, journey stage and severity, every record lands in one table, and a high-severity item emails the owner. The target state is HubSpot, for automatic classification, routing and follow-up tasks, after a data-protection review.</p>
+          <ul>
+            <li><strong>What the pilot proved:</strong> the form, table, alert and monthly summary ran end to end, and the summary surfaced the same top two themes as our analysis.</li>
+            <li><strong>What we adjusted:</strong> customers who pick their own category sometimes mis-tag (transfer delays were logged as "Onboarding"), so weekly human triage stays in the loop.</li>
+            <li><strong>Not yet validated:</strong> testing with real customers, and real-time transfer-status data from Digital Products.</li>
+          </ul>
+
+          <h4>Customer journey map</h4>
+          <p>We mapped one customer's full journey on a Miro board, extending five stages to seven by adding Consideration and Activation. Two moments of truth decide whether a customer stays:</p>
+          <ul>
+            <li><strong>Activation, the first deposit ("Can I get started?"):</strong> 82% reach tier selection and terms, but only 47% fund.</li>
+            <li><strong>First use, the first transfer ("Can I trust you with my money?"):</strong> a six-hour transfer delay with no explanation, and a generic reply from care. This is one of 112 care calls about held transfers in two months.</li>
+          </ul>
+          <p>Our conclusion: what must change is not every delay, it is the silence around it. Real-time transfer status (Processing, Confirmed, Complete, with a reference, an expected time and a route to a person) moves the customer from anxious and doubtful to informed and confident.</p>
+
+          <h4>Root cause</h4>
+          <p>Laying the three findings side by side showed one root cause: nobody owns the customer experience end to end. Onboarding fails silently, feedback goes unactioned and the journey never recovers. Each team owns its own touchpoint, but nobody owns the moments in between, which is where customers are lost.</p>
+
+          <h4>Recommendations</h4>
+          <ol>
+            <li><strong>Proactive status communication.</strong> An SMS or push at every onboarding step and every transaction delay, with a reference and next-update time. It is first because it is the cheapest and fastest fix and breaks the chain at its first link.</li>
+            <li><strong>Close the first-deposit leak.</strong> Save and resume, plain-language tiers, a 24-hour funding nudge and an agent-assisted option.</li>
+            <li><strong>One Voice of the Customer loop.</strong> One log, severity triage, a named owner, in-app human access and a monthly report to the Board.</li>
+          </ol>
+          <p><strong>Foundation:</strong> give the existing Head of CX end-to-end ownership across onboarding, feedback and the journey, with no new hire. None of the three moves holds without one accountable owner.</p>
+
+          <h4>How success is measured</h4>
+          <div class="scroll">
+          <table>
+            <tr><th>Metric</th><th>Today</th><th>Proposed target</th></tr>
+            <tr><td>First-deposit conversion (terms accepted to funded)</td><td>47%</td><td>65%</td></tr>
+            <tr><td>30-day activation (funded to 2+ transactions)</td><td>55%</td><td>65%</td></tr>
+          </table>
+          </div>
+          <p>Also tracked: stalled registrations recovered, transfer-related care calls, first-contact resolution, and time to first value (no baseline today). Both headline targets alone lift end-to-end conversion from 12% to about 20%, and reaching 25% also needs the save-and-resume fix at verification. These targets are proposed and would be validated with a pilot cohort.</p>
+
+          <h4>Our ask</h4>
+          <p>Approve end-to-end CX ownership and a four-week pilot of the three recommendations, reported back to the Board with results.</p>
+
+          <h4>Tools used</h4>
+          <p>Miro (journey and root-cause boards), Figma (prototype screens), Airtable (feedback pilot), HubSpot (target state), Google Forms, Zapier, Trello, GitHub and HTML.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills and Tools</h2>
+    <p class="sub">What I bring to a customer success team.</p>
+    <div class="grid">
+      <div class="card" style="padding:24px">
+        <h3 style="margin-top:0;color:var(--teal-dark)">Core Skills</h3>
+        <span class="pill">Churn analysis and recovery</span>
+        <span class="pill">Onboarding and training</span>
+        <span class="pill">Customer health scoring</span>
+        <span class="pill">Customer journey mapping</span>
+        <span class="pill">Voice of the customer</span>
+        <span class="pill">Stakeholder management</span>
+        <span class="pill">Renewals and retention</span>
+        <span class="pill">Escalation handling</span>
+      </div>
+      <div class="card" style="padding:24px">
+        <h3 style="margin-top:0;color:var(--teal-dark)">Tools</h3>
+        <span class="pill">Zendesk</span>
+        <span class="pill">HubSpot CRM</span>
+        <span class="pill">Freshdesk</span>
+        <span class="pill">Intercom</span>
+        <span class="pill">Gorgias</span>
+        <span class="pill">Zoho CRM</span>
+        <span class="pill">Mixpanel</span>
+        <span class="pill">Miro</span>
+        <span class="pill">Figma</span>
+        <span class="pill">Airtable</span>
+        <span class="pill">Zapier</span>
+        <span class="pill">Notion</span>
+        <span class="pill">Slack</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap" style="text-align:center">
+    <h2>Contact</h2>
+    <p class="sub">Open to Customer Success Manager roles. Let's talk.</p>
+    <a class="btn primary" style="background:var(--teal);color:#fff" href="mailto:eekpese@gmail.com">eekpese@gmail.com</a>
+    <a class="btn ghost" style="border-color:var(--teal);color:var(--teal)" href="https://www.linkedin.com/in/eloghenetracy/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Eloghene Tracy Ekpese</div>
+</footer>
+
+</body>
+</html>
